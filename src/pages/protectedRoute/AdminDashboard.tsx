@@ -4,7 +4,6 @@ import { getRegisteredNames } from "../../appwrite/Actions";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,

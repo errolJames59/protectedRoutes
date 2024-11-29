@@ -13,7 +13,7 @@ const Home = () => {
       </h3>
 
       <button
-        className="bg-gray-600 md:w-1/6 mx-auto rounded-md px-4 py-2 text-white hover:bg-gray-800"
+        className="bg-gray-600 shadow-sm md:w-1/6 mx-auto rounded-md px-4 py-2 text-white hover:bg-gray-800"
         onClick={() => {
           navigate("/dashboard");
         }}

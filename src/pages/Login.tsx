@@ -39,7 +39,7 @@ const App = () => {
 
   return (
     <>
-      <div className="bg-white shadow-md p-4 grid gap-4 md:w-2/6 mx-auto">
+      <div className="border-2 p-8 grid gap-4 md:w-2/6 mx-auto rounded-lg">
         <p>
           {loggedInUser
             ? `Logged in as ${loggedInUser.username}`

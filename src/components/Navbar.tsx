@@ -14,21 +14,19 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
   const [loggedInUser, setLoggedInUser] = useState<User | null>(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const user = await account.get();
-        if (!user || !user.name) {
-          return;
-        }
-        setLoggedInUser({
-          username: user.name as string, // Assuming user.name contains the username
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  const fetchUser = async () => {
+    try {
+      const user = await account.get();
+      console.log("Fetched user:", user);
+      setLoggedInUser({
+        username: user.name as string, // Assuming user.name contains the username
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+  useEffect(() => {
     fetchUser();
   }, []);
 
@@ -54,7 +52,6 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
               Logout
             </button>
           )}
-
         </ul>
       </nav>
     </header>
