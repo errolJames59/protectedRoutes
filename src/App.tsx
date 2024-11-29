@@ -4,10 +4,10 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <main>
-      <section>
-        <Navbar className="bg-gray-600 shadow-lg"/>
+      <section className="sticky top-0">
+        <Navbar className="bg-gray-600 shadow-lg text-white"/>
       </section>
-      <section>
+      <section className="mx-auto mt-8 text-center">
         <Outlet />
       </section>
     </main>
